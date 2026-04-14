@@ -139,7 +139,7 @@ public class EscapeRoom415 extends JComponent implements KeyListener
 
 
     int i = 0;
-    Scanner riddleWriter = new Scanner(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\Riddles.txt"));
+    Scanner riddleWriter = new Scanner(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\Riddles.txt"));
     while(riddleWriter.hasNextLine()){
       String line = riddleWriter.nextLine();
       //System.out.println(riddleWriter.nextLine());
@@ -167,7 +167,7 @@ public class EscapeRoom415 extends JComponent implements KeyListener
   {
     /* your code here */
     boolean canReplace = true;
-    Scanner alreadyWritten = new Scanner(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\levels.csv"));
+    Scanner alreadyWritten = new Scanner(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\levels.csv"));
     while(alreadyWritten.hasNextLine()){
       String testAlreadyWritten = alreadyWritten.nextLine().trim();
       //System.out.println(Integer.valueOf(testAlreadyWritten));
@@ -180,7 +180,7 @@ public class EscapeRoom415 extends JComponent implements KeyListener
 
     }
     if(canReplace){
-        BufferedWriter levelWriter = new BufferedWriter(new FileWriter("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\levels.csv", false));
+        BufferedWriter levelWriter = new BufferedWriter(new FileWriter("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\levels.csv", false));
         levelWriter.write(String.valueOf(playerLevel));
         levelWriter.close();
     }
@@ -193,7 +193,7 @@ public class EscapeRoom415 extends JComponent implements KeyListener
 
 
   private void setPlayerLevel() throws IOException {
-    Scanner pL = new Scanner(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\levels.csv"));
+    Scanner pL = new Scanner(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\levels.csv"));
     String newPL = pL.nextLine();
     if(newPL.isEmpty()){
       playerLevel = 1;
@@ -321,10 +321,10 @@ public class EscapeRoom415 extends JComponent implements KeyListener
     createWalls();
 
 
-    bgImage = ImageIO.read(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\grid.png"));
-    prizeImage = ImageIO.read(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\coin.png"));
-    player = ImageIO.read(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\player.png"));
-    playerQ = ImageIO.read(new File("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\playerQ.png"));
+    bgImage = ImageIO.read(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\grid.png"));
+    prizeImage = ImageIO.read(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\coin.png"));
+    player = ImageIO.read(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\player.png"));
+    playerQ = ImageIO.read(new File("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\playerQ.png"));
    
     // save player location
     playerLoc = new Point(currX, currY);
@@ -500,7 +500,7 @@ public class EscapeRoom415 extends JComponent implements KeyListener
   {
     try {
      
-      FileWriter fw = new FileWriter("C:\\Users\\cheki\\OneDrive\\Documents\\Python code\\Java Code\\4.1.5\\level.csv");
+      FileWriter fw = new FileWriter("C:\\Users\\1910250\\Downloads\\ImageApp-main\\ImageApp-main\\level.csv");
       String s = playerLevel + "\n";
       fw.write(s);
       fw.close();
